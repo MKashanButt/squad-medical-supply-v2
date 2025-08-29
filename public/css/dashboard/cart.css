@@ -39,7 +39,7 @@
 }
 
 .cart .stage .item .content button {
-margin-top: 10px;
+    margin-top: 10px;
 }
 
 .cart .stage>p {
@@ -49,4 +49,34 @@ margin-top: 10px;
 .product-footer {
     display: flex;
     gap: 10px;
+}
+
+@media (max-width: 640px) {
+    .header-options {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cart {
+        gap: 8px;
+    }
+
+    .cart .stage {
+        flex-direction: column;
+    }
+
+    .cart .stage .item {
+        width: 100%;
+    }
+
+    .cart .stage .item img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .product-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
