@@ -1,0 +1,52 @@
+.header-options {
+    display: flex;
+    gap: 10px;
+}
+
+.cart {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart h2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.cart .stage {
+    display: flex;
+    gap: 10px;
+    background-color: var(--yellow);
+    padding: 10px;
+}
+
+.cart .stage .item {
+    width: calc(100% * (1/4) - 10px);
+    background-color: white;
+}
+
+.cart .stage .item img {
+    width: 100%;
+}
+
+.cart .stage .item .content {
+    padding: 10px;
+}
+
+.cart .stage .item .content button {
+margin-top: 10px;
+}
+
+.cart .stage>p {
+    color: white;
+}
+
+.product-footer {
+    display: flex;
+    gap: 10px;
+}

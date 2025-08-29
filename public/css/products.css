@@ -1,0 +1,345 @@
+.hero {
+    height: 95vh;
+    padding: 60px 0;
+    background: linear-gradient(100deg, var(--blue), #40A7BC);
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.hero img {
+    position: absolute;
+    bottom: 0;
+}
+
+.hero .content {
+    width: 80%;
+    text-align: center;
+}
+
+.hero .content h1 {
+    font-size: 50px;
+}
+
+.searchForm {
+    width: 49%;
+    height: 40px;
+    margin: auto;
+    margin-top: -18px;
+    margin-bottom: 20px;
+    z-index: 100;
+    position: relative;
+    display: flex;
+    box-shadow: rgba(17, 17, 26, 0.4) 0px 1px 10px;
+}
+
+.searchForm input {
+    width: 90%;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.searchForm button {
+    width: 10%;
+    border: 1px solid #D0D0D7;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.searchForm .icon {
+    width: 30px;
+}
+
+.promotion {
+    width: 90%;
+    display: flex;
+    gap: 51px;
+    margin: 40px auto;
+}
+
+.promotion .item {
+    width: calc(100% * (1/4));
+    padding: 50px 20px;
+    position: relative;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.promotion .item .content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 60;
+    position: relative;
+}
+
+.promotion .item h3 {
+    color: white;
+}
+
+.promotion .item .overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 26, 0.4);
+    position: absolute;
+    z-index: 50;
+}
+
+.promotion .item:nth-of-type(1) {
+    background-image: url('../images/lymphedema-pump.avif');
+}
+
+.promotion .item:nth-of-type(2) {
+    background-image: url('../images/neck-pain.avif');
+}
+
+.promotion .item:nth-of-type(3) {
+    background-image: url('../images/wheelchair.avif');
+}
+
+.promotion .item:nth-of-type(4) {
+    background-image: url('../images/tense-unit.avif');
+}
+
+.promotion .item span {
+    width: fit-content;
+    font-size: 10px;
+    padding: 5px;
+    background-color: var(--yellow);
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.info {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    background-color: var(--yellow);
+    padding: 20px 0;
+    user-select: none;
+}
+
+.info .item {
+    width: calc(100% * (1/3));
+    display: flex;
+    border-left: 1px solid white;
+    gap: 10px;
+    padding: 40px;
+    align-items: center;
+    color: white;
+}
+
+.info .item:nth-of-type(1) {
+    border: none;
+}
+
+.info .item .icon {
+    width: 50px;
+    fill: white;
+}
+
+.info .item h3 {
+    color: white;
+}
+
+.products {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.products .stage {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.products .stage .item {
+    width: calc(100% * (1/4) - 20px);
+    padding: 10px;
+    display: grid;
+}
+
+.products .stage .item img {
+    margin-bottom: 10px;
+}
+
+.products .stage .item h3 {
+    margin-bottom: 5px;
+}
+
+.products .stage .item h4 {
+    font-size: 12px;
+}
+
+.products .stage .item li {
+    width: 90%;
+    list-style: circle;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.products .stage .item button {
+    align-self: end;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    color: white;
+    cursor: pointer;
+}
+
+.product-footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters {
+    width: 20%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+}
+
+.filters form {
+    position: sticky;
+    top: 10px;
+}
+
+.filters form h2 {
+    position: sticky;
+    margin-bottom: 10px;
+}
+
+.filters form .search {
+    display: flex;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.filters form .search input {
+    width: 85%;
+    padding-left: 5px;
+    outline: none;
+    border: 1px solid #D0D0D7;
+    border-right: 0;
+    border-radius: 0;
+}
+
+.filters form .search button {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D0D0D7;
+    border-radius: 0;
+}
+
+.filters form .search button .icon {
+    width: 20px;
+}
+
+.filters form .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.filters form .tags button {
+    border-radius: 25px;
+    padding: 5px 7px;
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        padding: 40px 20px;
+        height: 50vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .hero .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 75%;
+        height: 58%;
+    }
+
+    .hero .content h1 {
+        font-size: 36px;
+    }
+
+    .searchForm {
+        width: 90%;
+        height: 35px;
+        margin-top: 10px;
+    }
+
+    .promotion {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .promotion .item {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .info {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .info .item {
+        width: 100%;
+        padding: 20px 10px;
+        border: none;
+        border-top: 1px solid white;
+    }
+
+    .products {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .products .stage {
+        width: 100%;
+    }
+
+    .products .stage .item {
+        width: 100%;
+    }
+
+    .filters {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .filters form {
+        position: static;
+    }
+}

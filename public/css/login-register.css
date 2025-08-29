@@ -1,0 +1,67 @@
+main {
+    width: 80%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+main>div {
+    width: 50%;
+    padding: 20px;
+}
+
+main .login {
+    background-color: var(--yellow);
+    color: white;
+}
+
+main .login h1 {
+    color: white;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+main form input {
+    width: 100%;
+    padding: 4px 4px;
+    outline: none;
+    font-size: 13px;
+    border: 1px solid;
+    color: black;
+}
+
+main form .password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+main form .password span {
+    display: flex;
+    align-items: center;
+}
+
+main form .password input {
+    border: 0;
+}
+
+main form button {
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+    padding: 10px;
+    margin-top: 10px;
+    transition: 0.2s ease all;
+}
+
+main form button:hover {
+    background-color: white;
+    color: var(--yellow);
+    cursor: pointer;
+}

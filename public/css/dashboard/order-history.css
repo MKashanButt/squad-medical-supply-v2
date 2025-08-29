@@ -1,0 +1,47 @@
+.header-options {
+    display: flex;
+    gap: 10px;
+}
+
+.order-history {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-history h2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.order-history .stage {
+    display: flex;
+    gap: 10px;
+    background-color: var(--yellow);
+    padding: 10px;
+}
+
+.order-history .stage .item {
+    width: calc(100% * (1/4) - 10px);
+    background-color: white;
+}
+
+.order-history .stage .item img {
+    width: 100%;
+}
+
+.order-history .stage .item .content {
+    padding: 10px;
+}
+
+.order-history .stage .item .content button {
+    margin-top: 10px;
+}
+
+.order-history .stage>p {
+    color: white;
+}

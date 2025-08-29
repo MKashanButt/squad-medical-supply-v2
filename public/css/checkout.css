@@ -1,0 +1,62 @@
+main {
+    width: 80%;
+    display: flex;
+    margin: 10px auto;
+}
+
+main form {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+main .product-showcase {
+    width: 40%;
+    padding: 10px;
+}
+
+main .product-showcase p:last-child {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+main .product-showcase p:last-child input {
+    width: 50px;
+    padding: 4px 4px;
+    outline: none;
+    font-size: 13px;
+    border: 1px solid;
+    color: black;
+}
+
+main .checkout-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .checkout-fields label {
+    user-select: none;
+}
+
+main .checkout-fields>input,
+main .checkout-fields>select {
+    width: 100%;
+    padding: 4px 4px;
+    outline: none;
+    font-size: 13px;
+    border: 1px solid;
+    color: black;
+}
+
+main .checkout-fields .radio-container {
+    display: flex;
+    gap: 10px;
+}
+
+main .checkout-fields>button {
+    margin-top: 20px;
+}

@@ -1,0 +1,172 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 2%;
+}
+
+.hero .content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero .content hr {
+    width: 70%;
+    border: 4px solid var(--yellow);
+    margin: -10px 0 10px 0;
+}
+
+.hero .content button {
+    width: 20%;
+    padding: 10px;
+    background-color: var(--yellow);
+    color: white;
+    border: 1px solid var(--yellow);
+    text-transform: uppercase;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.hero .content button:hover {
+    background-color: transparent;
+    color: var(--yellow);
+}
+
+.blogs {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogs form {
+    width: 50%;
+    display: flex;
+    border: 2px solid var(--yellow);
+    border-radius: 30px;
+}
+
+.blogs form input {
+    all: unset;
+    width: 80%;
+    padding: 10px;
+}
+
+.blogs form button {
+    all: unset;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid var(--yellow);
+    cursor: pointer;
+}
+
+.blogs form button .icon {
+    width: 30px;
+}
+
+.blogs .stage {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.blogs .stage .item {
+    width: calc(100% * (1/4) - 20px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid var(--yellow);
+    border-radius: 10px;
+}
+
+.blogs .stage .item h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.blogs .stage .item p {
+    margin-bottom: 20px;
+}
+
+.blogs .stage .item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blogs .stage .tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blogs .stage .tags button {
+    border-radius: 25px;
+    padding: 5px 7px;
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .hero .content {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .hero .content h1 {
+        font-size: 30px;
+    }
+
+    .blogs form {
+        width: 80%;
+    }
+
+    .blogs .stage .item {
+        width: 100%;
+    }
+
+    .blogs .stage .item img {
+        height: 150px;
+    }
+
+    .blogs .stage .tags button {
+        padding: 3px 5px;
+    }
+}

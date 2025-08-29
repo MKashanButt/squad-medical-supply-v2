@@ -1,0 +1,554 @@
+.hero {
+    display: grid;
+    height: 30vh;
+    flex-direction: column;
+    background-image: url('../images/about-hero.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.hero .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--blue);
+    opacity: 60%;
+    z-index: 50;
+}
+
+.hero .content {
+    width: 40%;
+    height: 100%;
+    margin: auto 0;
+    padding: 55px 20px;
+    z-index: 60;
+}
+
+.hero .content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero .content h1 span {
+    color: black;
+}
+
+.hero .overlayContent {
+    width: 80%;
+    right: 0;
+    bottom: -70px;
+    padding: 20px;
+    background-color: white;
+    z-index: 100;
+    color: black;
+    position: absolute;
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.hero .overlayContent h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero .overlayContent .item {
+    width: calc(100% * (1/3));
+    padding: 10px;
+    border-left: 1px solid;
+}
+
+.hero .overlayContent .item:nth-of-type(1) {
+    border: 0;
+}
+
+.hero .overlayContent .item .icon {
+    width: 40px;
+    stroke: white;
+    fill: var(--blue);
+}
+
+.missionVision {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+}
+
+.missionVision .stage {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.missionVision .stage .item .icon {
+    width: 40px;
+    border: 1px solid;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.missionVision h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.missionVision>p {
+    margin-bottom: 10px;
+}
+
+.about {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about .content h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.about .content p {
+    width: 90%;
+}
+
+.about .content ul {
+    margin-top: 10px;
+}
+
+.about .content ul li {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.about .image {
+    width: 50%;
+    padding: 2%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .image img {
+    width: 90%;
+    height: 100%;
+    z-index: 100;
+}
+
+.about .image .shape {
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--blue);
+    position: absolute;
+    z-index: 50;
+}
+
+.services {
+    width: 80%;
+    padding: 100px 0;
+    margin: auto;
+}
+
+.services h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.services .stage {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.services .stage .tabs {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.services .stage .tabs .item {
+    width: calc(100% * (1/2) - 10px);
+    padding: 10px;
+    background-color: white;
+    border-bottom: 2px solid var(--blue);
+    text-align: center;
+}
+
+.services .stage .tabs .active {
+    background-color: var(--blue);
+    color: white;
+    fill: white;
+    color: black;
+    fill: black;
+}
+
+.services .stage .info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.services .stage .info .item {
+    width: calc(100% * (1/7) - 20px);
+    padding: 10px;
+    text-align: center;
+}
+
+.services .stage .info .item img {
+    width: 200px;
+    height: 200px;
+}
+
+.services .stage .healthcareInfo {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services .stage .healthcareInfo img {
+    width: fit-content;
+    height: 80px;
+    margin: auto;
+}
+
+.services .stage .caregiverInfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.services .stage .caregiverInfo .content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.services .stage .caregiverInfo .content h3 {
+    font-size: 40px;
+}
+
+.services .stage .caregiverInfo .content button {
+    width: 20%;
+}
+
+.services .stage .caregiverInfo .image {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services .stage .caregiverInfo .image img {
+    width: 60%;
+    height: 600px;
+}
+
+.healthcareInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.healthcareInfo h2 {
+    font-size: 40px;
+}
+
+.healthcareInfo .stage {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.healthcareInfo .stage img {
+    width: 70% !important;
+    height: fit-content !important;
+}
+
+.healthcareInfo .stage .sierraLogo {
+    width: 20%;
+    height: 20%;
+}
+
+.healthcareInfo .stage .item {
+    width: calc(100% * (1/4) - 10px) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/cta-bg.avif');
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.cta .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 50%;
+    background: rgba(52, 52, 52, 1);
+    z-index: 50;
+}
+
+.cta .container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 60;
+}
+
+.cta .container .content {
+    width: 80%;
+}
+
+.cta .container button {
+    justify-self: end;
+}
+
+.howToBuy {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 35px 0;
+    background-color: var(--yellow);
+    position: relative;
+    margin-top: 90px;
+}
+
+.howToBuy img {
+    position: absolute;
+    top: -35px;
+}
+
+.howToBuy h2 {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.howToBuy .content {
+    width: 80%;
+    margin: auto;
+}
+
+.howToBuy .stage {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    user-select: none;
+}
+
+.howToBuy .item {
+    width: calc(100% * (1/5));
+    display: flex;
+    border-left: 1px solid white;
+    gap: 10px;
+    padding: 40px;
+    align-items: center;
+    color: white;
+}
+
+.howToBuy .item:nth-of-type(1) {
+    border: none;
+}
+
+.howToBuy .item h3 {
+    color: white;
+}
+
+.howToBuy .item .icon {
+    width: 50px;
+    fill: white;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero .content {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero .content h1 {
+        font-size: 30px;
+    }
+
+    .hero .overlayContent {
+        position: relative;
+        flex-direction: column;
+        margin-top: -50px;
+    }
+
+    .hero .overlayContent .item {
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid #ccc;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .hero .overlayContent .item:nth-of-type(1) {
+        border: none;
+    }
+
+    .missionVision {
+        margin-top: 200px;
+        padding-top: 230px;
+    }
+
+    .missionVision h2 {
+        font-size: 30px;
+    }
+
+    .missionVision .stage {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .about .content,
+    .about .image {
+        width: 100%;
+    }
+
+    .about .content h2 {
+        font-size: 30px;
+    }
+
+    .about .content p {
+        width: 100%;
+    }
+
+    .services {
+        width: 90%;
+        padding: 50px 0;
+    }
+
+    .services h2 {
+        font-size: 30px;
+    }
+
+    .services .stage {
+        flex-direction: column;
+    }
+
+    .services .stage .tabs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .services .stage .tabs .item {
+        width: 100%;
+    }
+
+    .services .stage .info .item {
+        width: 100%;
+    }
+
+    .services .stage .info .item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .services .stage .caregiverInfo {
+        flex-direction: column;
+    }
+
+    .services .stage .caregiverInfo .content,
+    .services .stage .caregiverInfo .image {
+        width: 100%;
+    }
+
+    .services .stage .caregiverInfo .image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .insurances .stage {
+        flex-direction: column;
+    }
+
+    .insurances .stage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cta .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta .container .content,
+    .cta .container button {
+        width: 100%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .howToBuy .stage {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .howToBuy .item {
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid white;
+        padding: 20px;
+    }
+
+    .howToBuy .item:nth-of-type(1) {
+        border-bottom: 1px solid;
+    }
+
+    .howToBuy h2 {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import "./responsive.css";
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blue: #5CB8AA;
+    --yellow: #1A5364;
+    --red: oklch(63.7% 0.237 25.331);
+    --green: oklch(52.7% 0.154 150.069);
+    --orange: oklch(75% 0.183 55.934);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Oswald", sans-serif;
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--yellow);
+}
+
+.hidden {
+    display: none !important;
+}
+
+[x-cloak] {
+    display: none;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+.bg-red {
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange) !important;
+    border-color: var(--orange) !important;
+}
+
+.bg-green {
+    background-color: var(--green) !important;
+    border-color: var(--green) !important;
+}
+
+.notification {
+    min-width: 300px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 30px 10px;
+    background-color: var(--yellow);
+    color: white;
+    z-index: 2000;
+}
+
+.notification button {
+    all: unset;
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.importantInfo {
+    width: 100%;
+    background-color: var(--blue);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.importantInfo p {
+    margin: 0;
+}
+
+.infoButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.importantInfo button {
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.importantInfo button {
+    background-color: var(--yellow);
+    color: white;
+}
+
+.dashboard-body .content {
+    width: 80%;
+    padding: 10px;
+}
+
+.active-link {
+    background-color: var(--yellow);
+    color: white;
+}
+
+.primary {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.primary:hover {
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+    color: white;
+}
+
+.danger {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid oklch(63.7% 0.237 25.331);
+    background-color: oklch(63.7% 0.237 25.331);
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.danger:hover {
+    filter: brightness(0.7);
+}
+
+.customNavigation {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.customNavigation button {
+    width: 60px;
+    justify-self: end;
+    position: absolute;
+    padding: 1px;
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.customNavigation button:hover {
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+}
+
+.customNavigation button:nth-of-type(1) {
+    left: 0;
+}
+
+.customNavigation button .icon {
+    width: 80px;
+}
+
+.none {
+    display: none;
+}
+
+.container {
+    margin: auto !important;
+}
+
+@media (max-width: 640px) {
+    .importantInfo {
+        font-size: 12px;
+        padding: 8px 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .infoButtons {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .importantInfo button {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .braceDialog .content {
+        width: 90%;
+        margin: 0 10px;
+    }
+
+    .braceDialog form {
+        margin: 0;
+        padding: 0;
+    }
+
+    .braceDialog form .field {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .braceDialog form .field label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .braceDialog form .field input,
+    .braceDialog form .field select,
+    .braceDialog form .field textarea {
+        width: 100%;
+    }
+
+    .braceDialog form button {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .braceDialog .content button {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .braceDialog .consentField p {
+        font-size: 10px;
+        margin-top: -15px;
+        margin-left: 12px;
+    }
+
+    .braceDialog .consentField #consent {
+        margin-left: -5px;
+        display: inline-flex;
+        margin-left: -14px;
+    }
+
+    .braceDialog button {
+        padding: 10px;
+    }
+
+    .close {
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        right: 5px;
+        font-size: 12px;
+    }
+
+    .primary {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .customNavigation button {
+        width: 40px;
+        padding: 4px;
+    }
+
+    .customNavigation button .icon {
+        width: 50px;
+    }
+}
+
+@media (min-width:1300px) and (max-width:1400px) {
+    .container {
+        width: 1300px !important;
+    }
+}
+
+@media (min-width:1400px) and (max-width:1500px) {
+    .container {
+        width: 1400px !important;
+    }
+}
+
+@media (min-width:1500px) and (max-width:1600px) {
+    .container {
+        width: 1500px !important;
+    }
+}
+
+@media (min-width:1700px) and (max-width:1800px) {
+    .container {
+        width: 1700px !important;
+    }
+}
+
+@media (min-width:1800px) {
+    .container {
+        width: 1800px !important;
+    }
+}

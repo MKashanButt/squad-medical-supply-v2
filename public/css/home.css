@@ -1,0 +1,566 @@
+.hero {
+    width: 100%;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .stage {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+    display: flex;
+    gap: 20px;
+}
+
+.hero .content button {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid var(--yellow);
+    background: var(--yellow);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.hero .overlaySlider {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 40;
+}
+
+.hero .overlaySlider .slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 140px;
+}
+
+.hero .overlaySlider .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+
+.hero .overlaySlider .slide .content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 60;
+    color: white;
+}
+
+.hero .overlaySlider .slide .content h1 {
+    font-size: 60px;
+    padding: 10px;
+    background-color: var(--blue);
+}
+
+.hero .overlaySlider .slide .content p {
+    font-size: 27px;
+}
+
+.hero .overlaySlider .slide .content button {
+    width: 25%;
+    z-index: 50;
+}
+
+.slideOne {
+    justify-content: center;
+}
+
+.slideOne .content {
+    width: 80%;
+    text-align: center;
+}
+
+.slideLast {
+    justify-content: end;
+}
+
+.hero .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    opacity: 50%;
+    background: rgba(52, 52, 52, 1);
+}
+
+.whatWeDo {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.whatWeDo .head {
+    display: flex;
+    align-items: center;
+}
+
+.whatWeDo .head .headings {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.whatWeDo .head h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--yellow);
+}
+
+.whatWeDo .head .content {
+    width: 70%;
+    padding: 10px 20px;
+    border-left: 1px solid;
+}
+
+.whatWeDo .head .content button {
+    background-color: var(--yellow);
+    padding: 10px;
+    border: 1px solid var(--yellow);
+    color: white;
+    z-index: 60;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.whatWeDo .stage {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.whatWeDo .stage .item {
+    width: calc(100% * (1/3));
+    border: 1px solid;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.whatWeDo .stage .item .icon {
+    width: 50px;
+    background-color: white;
+    margin: auto;
+    margin-top: -45px;
+}
+
+.promotion {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.promotion h2 {
+    font-size: 40px;
+}
+
+.promotion .stage {
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.promotion .stage h3 {
+    font-size: 25px;
+    z-index: 60;
+    /* color: white; */
+    color: black;
+}
+
+.promotion .stage .item {
+    padding: 10px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    animation: bounce2 2s ease infinite;
+    position: relative;
+}
+
+.promotion .stage .item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 50%;
+    background-color: var(--blue);
+    z-index: 60;
+}
+
+.promotion .stage .item img {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 50;
+    top: 0;
+}
+
+.promotion button {
+    background-color: var(--yellow);
+    padding: 10px;
+    border: 1px solid var(--yellow);
+    color: white;
+    z-index: 60;
+    cursor: pointer;
+}
+
+.stats {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: var(--yellow);
+    color: white;
+}
+
+.stats h2 {
+    font-size: 40px;
+    color: white;
+}
+
+.stats hr {
+    width: 200px;
+    border: 2px solid white;
+}
+
+.stats .stage {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+    color: black;
+}
+
+.stats .stage .item {
+    width: calc(100% * (1/3));
+    padding: 10px;
+    background-color: white;
+}
+
+.stats .stage .item .container {
+    border: 1px solid;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.stats .stage .item .container .icon {
+    width: 30px;
+    margin: auto;
+}
+
+.stats .stage .item .container p {
+    padding: 0 10px;
+}
+
+.aboutUs {
+    width: 90%;
+    gap: 20px;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    margin: auto;
+}
+
+.aboutUs h2 {
+    font-size: 40px;
+}
+
+.aboutUs .image {
+    width: 35%;
+    margin: auto;
+}
+
+.aboutUs .image img {
+    width: 100%;
+    height: 370px;
+}
+
+.aboutUs .content {
+    width: 65%;
+}
+
+.aboutUs button {
+    background-color: var(--yellow);
+    padding: 10px;
+    border: 1px solid var(--yellow);
+    box-shadow: 0 0 20px 0;
+    color: white;
+}
+
+.aboutUs p {
+    margin-bottom: 20px;
+}
+
+.insurances {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.insurances h2 {
+    font-size: 40px;
+}
+
+.insurances .stage {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.insurances .stage img {
+    width: 70%;
+    height: fit-content;
+}
+
+.insurances .stage .sierraLogo {
+    width: 20%;
+    height: 20%;
+}
+
+.insurances .stage .item {
+    width: calc(100% * (1/4) - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta {
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    background-image: url('../images/cta-bg.avif');
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.cta .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 50%;
+    background: rgba(52, 52, 52, 1);
+    z-index: 50;
+}
+
+.cta .container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 60;
+}
+
+.cta .container .content {
+    width: 80%;
+}
+
+.cta .container button {
+    justify-self: end;
+}
+
+@media (max-width: 640px) {
+    .hero {
+        height: 30vh;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .hero .overlaySlider .slide {
+        flex-direction: column;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .hero .overlaySlider .slide .content {
+        width: 90%;
+        text-align: center;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero .overlaySlider .slide .content h1 {
+        font-size: 30px;
+        padding: 5px;
+    }
+
+    .hero .overlaySlider .slide .content p {
+        font-size: 18px;
+    }
+
+    .hero .overlaySlider .slide .content button {
+        width: 70%;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .whatWeDo {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .whatWeDo .head {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .whatWeDo .head .headings {
+        width: 100%;
+        text-align: center;
+    }
+
+    .whatWeDo .head h2 {
+        font-size: 30px;
+    }
+
+    .whatWeDo .head .content {
+        border-left: 0;
+        border-top: 1px solid;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .whatWeDo .head .content button {
+        width: 100%;
+    }
+
+    .whatWeDo .stage {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .whatWeDo .stage .item {
+        width: 100%;
+    }
+
+    .promotion h2 {
+        text-align: center;
+    }
+
+    .promotion .stage {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .promotion .stage .item {
+        width: 90%;
+        margin: auto;
+    }
+
+    .stats {
+        padding: 50px 0;
+        gap: 20px;
+    }
+
+    .stats h2 {
+        font-size: 30px;
+    }
+
+    .stats .stage {
+        flex-direction: column;
+    }
+
+    .stats .stage .item {
+        width: 100%;
+    }
+
+    .aboutUs {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .aboutUs .image {
+        width: 80%;
+    }
+
+    .aboutUs .content {
+        width: 100%;
+    }
+
+    .insurances {
+        text-align: center;
+    }
+
+    .insurances .stage {
+        width: 100%;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .insurances .stage img {
+        width: 150px;
+        height: 60px;
+    }
+
+    .cta {
+        padding: 50px 0;
+    }
+
+    .cta .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .cta .container .content {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta .container button {
+        width: 100%;
+        justify-self: center;
+    }
+}

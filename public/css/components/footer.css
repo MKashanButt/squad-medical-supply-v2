@@ -1,0 +1,176 @@
+.footer {
+    background-color: var(--yellow);
+    color: white;
+}
+
+.footer h2 {
+    color: white;
+}
+
+.footer .container {
+    display: flex;
+    gap: 10px;
+}
+
+.footer a {
+    all: unset;
+}
+
+.company,
+.links,
+.newsletter {
+    width: 30%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.company .logo {
+    width: 200px;
+    height: 100px;
+}
+
+.company .socials {
+    display: flex;
+    gap: 10px;
+}
+
+.company .socials .icon {
+    width: 20px;
+    margin-top: 10px;
+    fill: white;
+}
+
+.links {
+    width: 40%;
+    flex-direction: row;
+}
+
+.links nav {
+    width: calc(100% * (1/3));
+    padding: 2%;
+}
+
+.links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 10px 0 0 35px;
+}
+
+.links ul li {
+    list-style: circle;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+
+.links ul li:hover {
+    margin-left: 5px;
+}
+
+.newsletter {
+    padding-top: 2.8%;
+}
+
+.newsletter form {
+    display: flex;
+    height: 30px;
+}
+
+.newsletter form input {
+    width: 90%;
+    border: 1px solid white;
+    border-radius: 0;
+    outline: none;
+    color: black;
+    padding-left: 5px;
+}
+
+.newsletter form button {
+    all: unset;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+    background-color: var(--yellow);
+}
+
+.newsletter form .icon {
+    width: 20px;
+}
+
+.copyright {
+    width: 100%;
+    padding: .5%;
+    text-align: center;
+    background-color: var(--yellow);
+    color: white;
+}
+
+@media (max-width: 640px) {
+    .footer .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 10px;
+    }
+
+    .company,
+    .links,
+    .newsletter {
+        width: 100%;
+        padding: 5%;
+        align-items: center;
+    }
+
+    .company .logo {
+        width: 40%;
+        height: 100px;
+    }
+
+    .company .socials {
+        justify-content: center;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links nav {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .links ul {
+        margin: 10px 0;
+        padding: 0;
+        gap: 8px;
+    }
+
+    .newsletter {
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .newsletter form input {
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+    }
+
+    .newsletter form button {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    .copyright {
+        padding: 2%;
+        font-size: 14px;
+    }
+}
