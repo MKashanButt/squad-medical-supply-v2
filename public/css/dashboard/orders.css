@@ -49,3 +49,58 @@
 .orders .stage>p {
     color: white;
 }
+
+@media (max-width: 640px) {
+    .header-options {
+        display: flex;
+        gap: 10px;
+    }
+
+    .orders {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .orders h2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: black;
+    }
+
+    .orders .stage {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--yellow);
+        padding: 10px;
+    }
+
+    .orders .stage .item {
+        width: 100%;
+        background-color: white;
+    }
+
+    .orders .stage .item img {
+        width: 100%;
+    }
+
+    .orders .stage .item .content {
+        padding: 10px;
+    }
+
+    .orders .stage .item .content button {
+        margin-top: 10px;
+    }
+
+    .orders .stage .item .content p:last-of-type {
+        margin-top: 10px;
+    }
+
+    .orders .stage>p {
+        color: white;
+    }
+}
