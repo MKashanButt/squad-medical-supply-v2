@@ -65,3 +65,29 @@ main form button:hover {
     color: var(--yellow);
     cursor: pointer;
 }
+
+@media (max-width: 640px) {
+    main {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    main div{
+        width: 100%;
+    }
+
+    main form input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    main form button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    main .login h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
