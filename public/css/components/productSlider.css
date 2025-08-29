@@ -54,3 +54,21 @@
     width: 95%;
     margin: auto;
 }
+
+@media (max-width: 640px) {
+    .products .item {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .products h2 {
+        font-size: 28px;
+    }
+
+    .products .item h3 {
+        font-size: 20px;
+    }
+
+    .products .item .image {
+        height: 200px;
+    }
+}
