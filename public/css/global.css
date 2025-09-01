@@ -209,6 +209,25 @@ h4 {
     margin: auto !important;
 }
 
+.pagination-container {
+    display: flex;
+    float: right;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pagination li {
+    background-color: var(--yellow);
+    padding: 5px 10px;
+    color: white;
+    border: 2px solid white;
+    user-select: none;
+}
+
 @media (max-width: 640px) {
     .importantInfo {
         font-size: 12px;

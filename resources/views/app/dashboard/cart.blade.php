@@ -21,7 +21,9 @@
                         <h3>{{ $item->product->name }}</h3>
                         <p>{{ $item->product->description }}</p>
                         <div class="product-footer">
-                            <button class="primary">Proceed Order</button>
+                            <x-a :href="route('order.create', $item->product->id)">
+                                <button class="primary">Proceed Order</button>
+                            </x-a>
                             <x-a :href="route('user.cart.destroy', $item->id)">
                                 <button class="primary bg-red">Delete</button>
                             </x-a>

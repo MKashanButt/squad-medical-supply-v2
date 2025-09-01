@@ -15,12 +15,25 @@ class DashboardRouteRenderController extends Controller
     protected $orders;
     public function __construct()
     {
-        $this->cart = Cache::rememberForever('user_cart_' . Auth::id(), fn() => Cart::with('product')->where("user_id", Auth::id())->orderBy("created_at", "desc")->limit(10)->get());
-        $this->orders = Cache::rememberForever('user_order_' . Auth::id(), fn() => Order::with('product')->where("user_id", Auth::id())->orderBy("created_at", "desc")->limit(10)->get());
-        $this->awaitingOrders = Cache::rememberForever('user_awaiting_orders_' . Auth::id(), fn() => Order::where('status', 'awaiting delivery')
-            ->orWhere('user_id', Auth::id())
-            ->limit(4)
-            ->get());
+        $this->cart = Cache::rememberForever(
+            'user_cart_' . Auth::id(),
+            fn() => Cart::with('product')
+                ->where("user_id", Auth::id())
+                ->orderBy("created_at", "desc")
+                ->limit(10)->get());
+        $this->orders = Cache::rememberForever(
+            'user_order_' . Auth::id(),
+            fn() => Order::with('product')
+                ->where("user_id", Auth::id())
+                ->orderBy("created_at", "desc")
+                ->limit(10)
+                ->get());
+        $this->awaitingOrders = Cache::rememberForever(
+            'user_awaiting_orders_' . Auth::id(),
+            fn() => Order::where('status', 'awaiting delivery')
+                ->orWhere('user_id', Auth::id())
+                ->limit(4)
+                ->get());
     }
     public function index(): View
     {
