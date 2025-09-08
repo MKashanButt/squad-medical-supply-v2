@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->foreignId('account_type_id')
                 ->nullable()
-                ->constrained('account_type')
+                ->constrained('account_types')
                 ->nullOnDelete();
             $table->rememberToken();
             $table->timestamps();

@@ -47,7 +47,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/order/store/{id}', 'store')->name('order.store');
     });
 
-    Route::prefix('/admin')->group(function() {
+    Route::prefix('/admin')->middleware('admin')->group(function() {
         Route::controller(AdminController::class)
         ->group(function() {
             Route::get('/','index')->name('admin.dashboard');

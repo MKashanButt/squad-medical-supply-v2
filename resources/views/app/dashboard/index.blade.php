@@ -1,7 +1,6 @@
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/dashboard/index.css') }}">
 @endpush
-{{-- @dd($orders) --}}
 <x-app-layout>
     <main>
         <h2>Welcome {{ Auth::user()->name }}</h2>

@@ -79,30 +79,3 @@
         </section>
     </div>
 </x-admin-layout>
-<script>
-    function imageRenderer(containerId, targetId, targetClass) {
-        let IMAGE_SHOWCASE_CONTAINER = document.getElementById(containerId)
-        let images = document.getElementById(targetId).files
-
-        if (images && images.length > 0) {
-            for (let file of images) {
-                let imageElement = document.createElement('img');
-                imageElement.src = URL.createObjectURL(file);
-                imageElement.alt = `${file.name} image`;
-                imageElement.classList.add(targetClass);
-                IMAGE_SHOWCASE_CONTAINER.appendChild(imageElement);
-            }
-        }
-    }
-
-    function clearWindow(targetId, trigger = false) {
-        let targetElement = document.getElementById(targetId)
-        let triggerElement = document.getElementById(trigger)
-        let children = Array.from(targetElement.children);
-        for (let subElement of targetElement) {
-            if (subElement != triggerElement) {
-                targetElement.removeChild(subElement)
-            }
-        }
-    }
-</script>

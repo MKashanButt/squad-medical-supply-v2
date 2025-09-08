@@ -22,12 +22,19 @@
         <!-- Page Content -->
         <main>
             @if (request()->routeIs('user.*'))
-                <div class="dashboard-body">
-                    @include('partials._user-nav')
-                    <div class="content">
-                        {{ $slot }}
+                @if(Auth::user()->checkAccountType('admin'))
+                    <div style="width:100%;padding: 100px;text-align:center;">
+                        <p>This is an admin account. <a href="{{route('admin.dashboard')}}" style="color: blue">Route to admin
+                                dashboard?</a></p>
                     </div>
-                </div>
+                @else
+                    <div class="dashboard-body">
+                        @include('partials._user-nav')
+                        <div class="content">
+                            {{ $slot }}
+                        </div>
+                    </div>
+                @endif
             @else
                 {{ $slot }}
             @endif

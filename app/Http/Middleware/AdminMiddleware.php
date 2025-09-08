@@ -17,7 +17,7 @@ class AdminMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if(!Auth::user()->checkAccountType('admin')){
-            abort(403);
+            abort(403, 'You Dont have access for this resource');
         }
         return $next($request);
     }

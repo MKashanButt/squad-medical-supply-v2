@@ -63,6 +63,6 @@ class User extends Authenticatable
 
     public function checkAccountType(string $type): bool
     {
-        return $this->account_type->name === $type;
+        return $this->account_type->name === strtolower($type);
     }
 }

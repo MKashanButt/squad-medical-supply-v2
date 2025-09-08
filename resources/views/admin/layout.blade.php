@@ -34,7 +34,9 @@
 
 <body>
     <header>
-        <x-image src="{{asset('images/logo.avif')}}" alt="logo" />
+        <x-a :href="route('admin.dashboard')">
+            <x-image src="{{asset('images/logo.avif')}}" alt="logo" />
+        </x-a>
         <nav>
             <ul>
                 <x-a href="/admin">
@@ -51,6 +53,7 @@
     </main>
 
     @stack('js')
+    <script src="{{asset('js/admin.js')}}" defer></script>
     @if (session('success'))
         <x-notification type="default" :content="session('success')" />
     @endif
