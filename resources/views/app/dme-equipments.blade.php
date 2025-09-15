@@ -1,6 +1,3 @@
-@php
-    $uniqueTags = [];
-@endphp
 <x-app-layout>
     @push('css')
         <link rel="stylesheet" href="{{ asset('css/products.css') }}">
@@ -21,9 +18,9 @@
             </div>
             <x-image src="images/doctor-group.png" alt="group of doctors" />
         </section>
-        <form action="" class="searchForm">
-            <input type="search" name="productSearch" id="productSearch" value="" />
-            <button type="button">
+        <form action="{{route('app.products-search')}}" class="searchForm" method="GET">
+            <input type="search" name="input" id="search" value="{{request()->query('input')}}" />
+            <button type="submit">
                 <x-a href="#products">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512">
                         <path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" fill="none" stroke="currentColor"
@@ -175,10 +172,10 @@
                 @endforeach
             </div>
             <div class="filters">
-                <form action="" method="GET">
+                <form action="{{route('app.products-search')}}" method="GET">
                     <h2>Search:</h2>
                     <div class="search">
-                        <input type="search" name="fitlerSearch" id="filterSearch" value={searchTerm} />
+                        <input type="search" name="input" id="filterSearch" value="{{request()->query('input')}}" />
                         <button>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512">
                                 <path d="M256 80a176 176 0 10176 176A176 176 0 00256 80z" fill="none"
@@ -192,11 +189,13 @@
                     </div>
                     <h2>Tags:</h2>
                     <div class="tags">
-                        @foreach ($uniqueTags as $key => $tags)
+                        @forelse ($uniqueTags as $key => $tag)
                             <button key={{ $key }} type="button">
                                 {{ $tag }}
                             </button>
-                        @endforeach
+                        @empty
+                            <p>To Tags Available to filter</p>
+                        @endforelse
                     </div>
                 </form>
             </div>
