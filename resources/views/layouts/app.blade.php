@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
     <link rel="stylesheet" href="{{ asset('css/components/footer.css') }}">
     @stack('css')
-
-    <script src="{{ asset('js/alpine.min.js') }}" defer></script>
 </head>
 
 <body>
