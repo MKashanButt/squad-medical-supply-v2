@@ -213,7 +213,7 @@
                 <x-a href="/caregivers">Caregivers</x-a>
             </li>
             <li class="{{ request()->routeIs('app.services') ? 'active-link' : '' }}"
-                onclick="toggleDropdown('dropdown', 'dropdown-trigger', true)">
+                onclick="toggleDisplay('dropdown', 'dropdown-trigger', true)">
                 <span id="dropdown-trigger">
                     Resources
                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
