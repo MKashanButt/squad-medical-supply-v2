@@ -1,31 +1,28 @@
-let dropdownElement = document.querySelectorAll("[data-dropdown]");
-dropdownElement.forEach((dropdown) => {
-    let dropdownTargetClick = dropdown.querySelector("[data-click]");
-    let dropdownTargetAction = dropdown.querySelector("[data-target]");
-    let display = dropdown.querySelector("[data-hidden]");
-    let clickedOutside = dropdown.querySelector("[data-clicked-outside]");
+function toggleDropdown(dropdownId, triggerId, closeOnOutsideClick = false) {
+    let dropdown = document.getElementById(dropdownId);
+    let trigger = document.getElementById(triggerId);
 
-    if (display) {
-        display.classList.add("hidden");
-    }
-    dropdownTargetClick.addEventListener("click", (e) => {
+    dropdown.classList.add("hidden");
+
+    trigger.addEventListener("click", (e) => {
         e.stopPropagation();
-        dropdownElement.forEach((other) => {
-            if (other !== dropdown) {
-                let otherTargetAction = other.querySelector("[data-target]");
-                if (otherTargetAction) {
-                    otherTargetAction.classList.add("hidden");
-                }
-            }
-        });
-        dropdownTargetAction.classList.toggle("hidden");
+        dropdown.classList.toggle("hidden");
     });
 
-    if (clickedOutside) {
+    if (closeOnOutsideClick) {
         document.addEventListener("click", (e) => {
             if (!dropdown.contains(e.target)) {
-                dropdownTargetAction.classList.add("hidden");
+                dropdown.classList.add("hidden");
             }
         });
     }
-});
+}
+
+function toggleStyling(targetId, params) {
+    target = document.getElementById(targetId);
+    [styleClass, condition] = params;
+
+    if (condition) {
+        target.classList.add(styleClass);
+    }
+}
