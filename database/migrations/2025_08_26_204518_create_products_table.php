@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('description');
             $table->text('key_benefits');
             $table->string('thumbnail');
-            $table->json('images')->nullable();
-            $table->json('tags')->nullable();
+            $table->json('images')
+                ->nullable();
+            $table->json('tags')
+                ->nullable();
             $table->timestamps();
         });
     }
