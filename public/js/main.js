@@ -1,4 +1,4 @@
-function toggleDropdown(dropdownId, triggerId, closeOnOutsideClick = false) {
+function toggleDisplay(dropdownId, triggerId, closeOnOutsideClick = false) {
     let dropdown = document.getElementById(dropdownId);
     let trigger = document.getElementById(triggerId);
 
@@ -19,8 +19,8 @@ function toggleDropdown(dropdownId, triggerId, closeOnOutsideClick = false) {
 }
 
 function toggleStyling(targetId, params) {
-    target = document.getElementById(targetId);
-    [styleClass, condition] = params;
+    let target = document.getElementById(targetId);
+    let [styleClass, condition] = params;
 
     if (condition) {
         target.classList.add(styleClass);
